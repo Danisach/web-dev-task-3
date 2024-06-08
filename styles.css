@@ -1,0 +1,137 @@
+body 
+{
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+
+            /* Gradient Animation */
+    background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+    background-size: 400% 400%;
+    animation: animate-background 10s infinite ease-in-out;
+}
+@keyframes animate-background
+{
+   0%{
+       background-position: 0 50%;
+     } 
+   50%{
+       background-position: 100% 50%;
+      } 
+   100%{
+       background-position: 0 50%;
+       } 
+}
+
+.container 
+{
+    background: white;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+h1 
+{
+    text-align: center;
+}
+
+form 
+{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+input, select, button {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#priority-select{
+    font-weight: bold;
+       
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: #eee;
+    margin: 5px 10px;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+button.edit, button.delete, button.complete {
+    background: none;
+    border: none;
+    color: #007BFF;
+    cursor: pointer;
+}
+.edit:hover {
+    background-color:  rgb(142, 236, 231);
+    transition: .3s;
+}
+button.delete{
+    color: #e00505;
+}
+.delete:hover {
+    background-color:  rgb(249, 99, 99);
+    transition: .3s;
+}
+button.complete {
+    color: green;
+}
+button.complete:hover {
+    background-color:  rgb(93, 238, 93);
+    transition: .3s;
+}
+@media (max-width: 415px)  {
+    .container {
+       width: 350px;
+       position: relative;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-bottom: 20px;
+    }
+     select, #submit{
+        padding: 10px;
+        margin: 5px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        width: 320px;
+    }
+    button.edit, button.delete, button.complete {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+}
+}
+@media (max-width: 320px)  { 
+    form {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 20px;
+    }
+     select, #submit, #priority-select{
+        padding: 10px;
+        margin: 5px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        width: 300px;
+       }  
+}

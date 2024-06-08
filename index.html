@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do App</title>
+    <link rel="shortcut icon" href="./Icons/to-do.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>TO-DO App</h1>
+        <form id="task-form">
+            <input type="text" id="task-input" placeholder="Enter a new task" required>
+            <select id="priority-select">
+                <option value="Low">Priority-Low</option>
+                <option value="Medium">Priority-Medium</option>
+                <option value="High">Priority-High</option>
+            </select>
+            <button type="submit" id="submit">Add Task</button>
+        </form>
+     <ul id="task-list"></ul>
+   </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
